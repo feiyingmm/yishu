@@ -1,0 +1,118 @@
+{
+  "site": {
+    "fullName": "马亦姝",
+    "nickname": "妞妞",
+    "title": "亦姝的拼音乐园"
+  },
+  "pinyinData": [
+    { "symbol": "b", "category": "shengmu", "exampleChar": "波", "exampleReading": "bō" },
+    { "symbol": "p", "category": "shengmu", "exampleChar": "坡", "exampleReading": "pō" },
+    { "symbol": "m", "category": "shengmu", "exampleChar": "摸", "exampleReading": "mō" },
+    { "symbol": "f", "category": "shengmu", "exampleChar": "佛", "exampleReading": "fó" },
+    { "symbol": "d", "category": "shengmu", "exampleChar": "得", "exampleReading": "dé" },
+    { "symbol": "t", "category": "shengmu", "exampleChar": "特", "exampleReading": "tè" },
+    { "symbol": "n", "category": "shengmu", "exampleChar": "呢", "exampleReading": "ne" },
+    { "symbol": "l", "category": "shengmu", "exampleChar": "了", "exampleReading": "le" },
+    { "symbol": "g", "category": "shengmu", "exampleChar": "哥", "exampleReading": "gē" },
+    { "symbol": "k", "category": "shengmu", "exampleChar": "科", "exampleReading": "kē" },
+    { "symbol": "h", "category": "shengmu", "exampleChar": "喝", "exampleReading": "hē" },
+    { "symbol": "j", "category": "shengmu", "exampleChar": "鸡", "exampleReading": "jī" },
+    { "symbol": "q", "category": "shengmu", "exampleChar": "七", "exampleReading": "qī" },
+    { "symbol": "x", "category": "shengmu", "exampleChar": "西", "exampleReading": "xī" },
+    { "symbol": "zh", "category": "shengmu", "exampleChar": "知", "exampleReading": "zhī" },
+    { "symbol": "ch", "category": "shengmu", "exampleChar": "吃", "exampleReading": "chī" },
+    { "symbol": "sh", "category": "shengmu", "exampleChar": "狮", "exampleReading": "shī" },
+    { "symbol": "r", "category": "shengmu", "exampleChar": "日", "exampleReading": "rì" },
+    { "symbol": "z", "category": "shengmu", "exampleChar": "字", "exampleReading": "zì" },
+    { "symbol": "c", "category": "shengmu", "exampleChar": "刺", "exampleReading": "cì" },
+    { "symbol": "s", "category": "shengmu", "exampleChar": "四", "exampleReading": "sì" },
+    { "symbol": "y", "category": "shengmu", "exampleChar": "衣", "exampleReading": "yī" },
+    { "symbol": "w", "category": "shengmu", "exampleChar": "屋", "exampleReading": "wū" },
+    { "symbol": "a", "category": "yunmu", "exampleChar": "啊", "exampleReading": "ā" },
+    { "symbol": "o", "category": "yunmu", "exampleChar": "哦", "exampleReading": "ó" },
+    { "symbol": "e", "category": "yunmu", "exampleChar": "鹅", "exampleReading": "é" },
+    { "symbol": "i", "category": "yunmu", "exampleChar": "衣", "exampleReading": "yī" },
+    { "symbol": "u", "category": "yunmu", "exampleChar": "屋", "exampleReading": "wū" },
+    { "symbol": "ü", "category": "yunmu", "exampleChar": "鱼", "exampleReading": "yú" },
+    { "symbol": "ai", "category": "yunmu", "exampleChar": "爱", "exampleReading": "ài" },
+    { "symbol": "ei", "category": "yunmu", "exampleChar": "诶", "exampleReading": "éi" },
+    { "symbol": "ui", "category": "yunmu", "exampleChar": "威", "exampleReading": "wēi" },
+    { "symbol": "ao", "category": "yunmu", "exampleChar": "袄", "exampleReading": "ǎo" },
+    { "symbol": "ou", "category": "yunmu", "exampleChar": "鸥", "exampleReading": "ōu" },
+    { "symbol": "iu", "category": "yunmu", "exampleChar": "有", "exampleReading": "yǒu" },
+    { "symbol": "ie", "category": "yunmu", "exampleChar": "耶", "exampleReading": "yē" },
+    { "symbol": "üe", "category": "yunmu", "exampleChar": "月", "exampleReading": "yuè" },
+    { "symbol": "er", "category": "yunmu", "exampleChar": "耳", "exampleReading": "ěr" },
+    { "symbol": "an", "category": "yunmu", "exampleChar": "安", "exampleReading": "ān" },
+    { "symbol": "en", "category": "yunmu", "exampleChar": "恩", "exampleReading": "ēn" },
+    { "symbol": "in", "category": "yunmu", "exampleChar": "音", "exampleReading": "yīn" },
+    { "symbol": "un", "category": "yunmu", "exampleChar": "温", "exampleReading": "wēn" },
+    { "symbol": "ün", "category": "yunmu", "exampleChar": "晕", "exampleReading": "yūn" },
+    { "symbol": "ang", "category": "yunmu", "exampleChar": "昂", "exampleReading": "áng" },
+    { "symbol": "eng", "category": "yunmu", "exampleChar": "灯", "exampleReading": "dēng" },
+    { "symbol": "ing", "category": "yunmu", "exampleChar": "鹰", "exampleReading": "yīng" },
+    { "symbol": "ong", "category": "yunmu", "exampleChar": "翁", "exampleReading": "wēng" },
+    { "symbol": "zhi", "category": "zhengti", "exampleChar": "知", "exampleReading": "zhī" },
+    { "symbol": "chi", "category": "zhengti", "exampleChar": "吃", "exampleReading": "chī" },
+    { "symbol": "shi", "category": "zhengti", "exampleChar": "十", "exampleReading": "shí" },
+    { "symbol": "ri", "category": "zhengti", "exampleChar": "日", "exampleReading": "rì" },
+    { "symbol": "zi", "category": "zhengti", "exampleChar": "字", "exampleReading": "zì" },
+    { "symbol": "ci", "category": "zhengti", "exampleChar": "词", "exampleReading": "cí" },
+    { "symbol": "si", "category": "zhengti", "exampleChar": "四", "exampleReading": "sì" },
+    { "symbol": "yi", "category": "zhengti", "exampleChar": "一", "exampleReading": "yī" },
+    { "symbol": "wu", "category": "zhengti", "exampleChar": "五", "exampleReading": "wǔ" },
+    { "symbol": "yu", "category": "zhengti", "exampleChar": "雨", "exampleReading": "yǔ" },
+    { "symbol": "ye", "category": "zhengti", "exampleChar": "叶", "exampleReading": "yè" },
+    { "symbol": "yue", "category": "zhengti", "exampleChar": "月", "exampleReading": "yuè" },
+    { "symbol": "yuan", "category": "zhengti", "exampleChar": "圆", "exampleReading": "yuán" },
+    { "symbol": "yin", "category": "zhengti", "exampleChar": "音", "exampleReading": "yīn" },
+    { "symbol": "yun", "category": "zhengti", "exampleChar": "云", "exampleReading": "yún" },
+    { "symbol": "ying", "category": "zhengti", "exampleChar": "鹰", "exampleReading": "yīng" }
+  ],
+  "toneQuads": [
+    {
+      "base": "ma",
+      "label": "ma",
+      "tones": [
+        { "tone": 1, "mark": "mā", "char": "妈", "meaning": "妈妈" },
+        { "tone": 2, "mark": "má", "char": "麻", "meaning": "麻烦" },
+        { "tone": 3, "mark": "mǎ", "char": "马", "meaning": "小马" },
+        { "tone": 4, "mark": "mà", "char": "骂", "meaning": "骂人" }
+      ]
+    },
+    {
+      "base": "ba",
+      "label": "ba",
+      "tones": [
+        { "tone": 1, "mark": "bā", "char": "八", "meaning": "数字八" },
+        { "tone": 2, "mark": "bá", "char": "拔", "meaning": "拔萝卜" },
+        { "tone": 3, "mark": "bǎ", "char": "把", "meaning": "把手" },
+        { "tone": 4, "mark": "bà", "char": "爸", "meaning": "爸爸" }
+      ]
+    },
+    {
+      "base": "yi",
+      "label": "yi",
+      "tones": [
+        { "tone": 1, "mark": "yī", "char": "一", "meaning": "数字一" },
+        { "tone": 2, "mark": "yí", "char": "姨", "meaning": "阿姨" },
+        { "tone": 3, "mark": "yǐ", "char": "椅", "meaning": "椅子" },
+        { "tone": 4, "mark": "yì", "char": "意", "meaning": "意思" }
+      ]
+    },
+    {
+      "base": "wu",
+      "label": "wu",
+      "tones": [
+        { "tone": 1, "mark": "wū", "char": "乌", "meaning": "乌云" },
+        { "tone": 2, "mark": "wú", "char": "无", "meaning": "无聊" },
+        { "tone": 3, "mark": "wǔ", "char": "五", "meaning": "数字五" },
+        { "tone": 4, "mark": "wù", "char": "雾", "meaning": "大雾" }
+      ]
+    }
+  ],
+  "dadMessages": {
+    "greeting": "妞妞，欢迎来到你的拼音乐园，今天也要加油学拼音哦！",
+    "perfectScore": "妞妞真棒，拼音小达人，爸爸为你骄傲！"
+  }
+}
