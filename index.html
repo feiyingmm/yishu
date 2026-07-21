@@ -683,6 +683,23 @@ function easterAudioPath(key) {
   return `audio/easter/${key}.mp3`;
 }
 
+// 声母本身不带声调（呼读音，如 b→bo、f→fo），例字读音带调只是用来联想；
+// 兜底朗读/提示文案都不能直接用带调例字冒充声母读音
+const TONE_MARK_TO_BASE = {
+  'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a',
+  'ē': 'e', 'é': 'e', 'ě': 'e', 'è': 'e',
+  'ī': 'i', 'í': 'i', 'ǐ': 'i', 'ì': 'i',
+  'ō': 'o', 'ó': 'o', 'ǒ': 'o', 'ò': 'o',
+  'ū': 'u', 'ú': 'u', 'ǔ': 'u', 'ù': 'u',
+  'ǖ': 'ü', 'ǘ': 'ü', 'ǚ': 'ü', 'ǜ': 'ü',
+};
+function stripTone(pinyin) {
+  return pinyin.replace(/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/g, ch => TONE_MARK_TO_BASE[ch] || ch);
+}
+function fallbackReadingText(item) {
+  return item.category === 'shengmu' ? stripTone(item.exampleReading) : item.exampleChar;
+}
+
 let cachedVoice = null;
 let voiceUnavailableNoticeShown = false;
 
@@ -766,7 +783,7 @@ function renderList(category) {
     });
     card.querySelector('.card-speak-btn').addEventListener('click', (e) => {
       e.stopPropagation();
-      playAudioFile(symbolAudioPath(item), item.exampleChar);
+      playAudioFile(symbolAudioPath(item), fallbackReadingText(item));
     });
     grid.appendChild(card);
   });
@@ -842,8 +859,10 @@ function openDetail(globalIndex) {
   document.getElementById('detail-prev').addEventListener('click', () => navigateDetail(-1));
   document.getElementById('detail-next').addEventListener('click', () => navigateDetail(1));
   document.getElementById('replay-btn').addEventListener('click', () => runAnimation(item.symbol));
-  document.getElementById('speak-btn').addEventListener('click', () => playAudioFile(symbolAudioPath(item), item.exampleChar));
-  panel.querySelector('.reading-hint').textContent = `读 ${item.exampleReading}，就像"${item.exampleChar}"`;
+  document.getElementById('speak-btn').addEventListener('click', () => playAudioFile(symbolAudioPath(item), fallbackReadingText(item)));
+  panel.querySelector('.reading-hint').textContent = item.category === 'shengmu'
+    ? `声母不带声调，短促地读"${stripTone(item.exampleReading)}"，就像"${item.exampleChar}"的开头音`
+    : `读 ${item.exampleReading}，就像"${item.exampleChar}"`;
   runAnimation(item.symbol);
 
   activeResizeHandlers.length = 0; // 离开上一个详情/声调页面的画布，别再让它们响应 resize
@@ -900,14 +919,14 @@ const GRID_LINES = { line1: 0, line2: 35, line3: 70, line4: 105 };
 const LETTER_GLYPHS = {
   a: { zone: 'x', strokes: [
     'M 25 35 A 12 17.5 0 1 0 25 70 A 12 17.5 0 1 0 25 35',
-    'M 37 32 L 37 70',
+    'M 37 35 L 37 70',
   ]},
   b: { zone: 'ascender', strokes: [
     'M 18 0 L 18 70',
     'M 18 52.5 A 12 17.5 0 1 1 42 52.5 A 12 17.5 0 1 1 18 52.5',
   ]},
   c: { zone: 'x', strokes: [
-    'M 39 44 A 12 15 0 1 0 39 66',
+    'M 39 41 A 12 17.5 0 1 0 39 64',
   ]},
   d: { zone: 'ascender', strokes: [
     'M 25 35 A 12 17.5 0 1 0 25 70 A 12 17.5 0 1 0 25 35',
@@ -927,7 +946,7 @@ const LETTER_GLYPHS = {
   ]},
   h: { zone: 'ascender', strokes: [
     'M 18 0 L 18 70',
-    'M 18 35 Q 28 20 38 45 L 38 70',
+    'M 18 47 Q 18 35 28 35 Q 38 35 38 47 L 38 70',
   ]},
   i: { zone: 'x', strokes: [
     'M 25 35 L 25 70',
@@ -945,12 +964,12 @@ const LETTER_GLYPHS = {
   ]},
   m: { zone: 'x', strokes: [
     'M 14 35 L 14 70',
-    'M 14 35 Q 22 20 30 45 L 30 70',
-    'M 30 35 Q 38 20 46 45 L 46 70',
+    'M 14 47 Q 14 35 22 35 Q 30 35 30 47 L 30 70',
+    'M 30 47 Q 30 35 38 35 Q 46 35 46 47 L 46 70',
   ]},
   n: { zone: 'x', strokes: [
     'M 16 35 L 16 70',
-    'M 16 35 Q 24 20 32 45 L 32 70',
+    'M 16 47 Q 16 35 24 35 Q 32 35 32 47 L 32 70',
   ]},
   o: { zone: 'x', strokes: [
     'M 30 35 A 15 17.5 0 1 0 30 70 A 15 17.5 0 1 0 30 35',
@@ -965,7 +984,7 @@ const LETTER_GLYPHS = {
   ]},
   r: { zone: 'x', strokes: [
     'M 18 35 L 18 70',
-    'M 18 35 Q 24 26 32 40',
+    'M 18 42 Q 18 35 26 35 Q 32 35 32 40',
   ]},
   s: { zone: 'x', strokes: [
     'M 38 42 Q 38 35 28 35 Q 16 35 16 44 Q 16 52 28 53 Q 40 54 40 62 Q 40 70 26 70 Q 18 70 16 64',
@@ -1329,7 +1348,7 @@ function renderQuizQuestion() {
 
 function playQuizAudio() {
   const q = quizState.questions[quizState.index];
-  playAudioFile(symbolAudioPath(q.correct), q.correct.exampleChar);
+  playAudioFile(symbolAudioPath(q.correct), fallbackReadingText(q.correct));
 }
 
 function answerQuiz(chosen, btnEl) {
